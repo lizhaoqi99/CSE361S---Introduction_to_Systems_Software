@@ -1,4 +1,4 @@
-Projects for CSE 361S Introduction to Systems Software. (Adopted from CMU CSAPP)
+Projects for CSE 361S Introduction to Systems Software. (Course developed based on CMU CSAPP)
 
 Course description:
 
